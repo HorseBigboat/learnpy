@@ -1,6 +1,7 @@
 
 #Error when adding more int into the list to be sorted
 #RecursionError: maximum recursion depth exceeded in comparison
+import random
 
 def quicksort(lst,low,high):
 	i = low; j = high; key = lst[i]
@@ -25,7 +26,9 @@ def quicksort(lst,low,high):
 		return lst
 	
 def main():
-	L = [5,1,7,2,77,232,11,23,123,11]
+	L = []
+	for n in range(0,9):
+		L.append(random.randint(0,1000))
 	print(L)
 	print(quicksort(L,0,len(L)-1))
 
